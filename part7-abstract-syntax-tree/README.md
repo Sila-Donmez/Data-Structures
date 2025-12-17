@@ -6,14 +6,17 @@ Her düğüm bir operatör veya operand olabilir.
 ## Örnek 1
 İfade: a - (b + c * 2)
 
-AST:```
-      -
+AST:
+```
+  -
+ / \
+a   +
+   / \
+  b   *
      / \
-    a   +
-       / \
-      b   *
-         / \
-        c   2```
+    c   2
+```
+
 
 **Açıklama:**
 - '*' işlemi en yüksek önceliğe sahip, önce çözülür.
@@ -23,12 +26,14 @@ AST:```
 ## Örnek 2
 İfade: (x + y) * (z - 1)
 
-AST:```
+AST:
+```
       *
      / \
     +   -
    / \ / \
-  x  y z  1```
+  x  y z  1
+```
 
 **Not:** AST, derleyici mantığında bir ifadenin ağaç yapısı ile gösterimidir.  
 Kod ile traversal veya evaluation yapılabilir.
