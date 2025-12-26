@@ -33,7 +33,52 @@ void append(Node** head, int data) {
     newNode->prev = temp;
 }
 
-// Non-recursive yazdırma
+// Belirli bir elemandan sonra araya ekleme
+void insertAfter(Node* head, int prevData, int newData) {
+    Node* temp = head;
+
+    while (temp != NULL && temp->data != prevData)
+        temp = temp->next;
+
+    if (temp == NULL) {
+        printf("Eleman bulunamadi.\n");
+        return;
+    }
+
+    Node* newNode = createNode(newData);
+    newNode->next = temp->next;
+    newNode->prev = temp;
+
+    if (temp->next != NULL)
+        temp->next->prev = newNode;
+
+    temp->next = newNode;
+}
+
+// Değerine göre silme
+void deleteNode(Node** head, int key) {
+    Node* temp = *head;
+
+    while (temp != NULL && temp->data != key)
+        temp = temp->next;
+
+    if (temp == NULL) {
+        printf("Silinecek eleman bulunamadi.\n");
+        return;
+    }
+
+    if (temp->prev != NULL)
+        temp->prev->next = temp->next;
+    else
+        *head = temp->next; // ilk eleman siliniyorsa
+
+    if (temp->next != NULL)
+        temp->next->prev = temp->prev;
+
+    free(temp);
+}
+
+// Non-recursive traversal
 void printListIterative(Node* head) {
     Node* temp = head;
     while (temp != NULL) {
@@ -43,7 +88,7 @@ void printListIterative(Node* head) {
     printf("\n");
 }
 
-// Recursive yazdırma
+// Recursive traversal
 void printListRecursive(Node* head) {
     if (head == NULL)
         return;
@@ -52,7 +97,7 @@ void printListRecursive(Node* head) {
     printListRecursive(head->next);
 }
 
-// Belleği temizleme
+// Belleği recursive temizleme
 void destroy(Node* head) {
     if (head == NULL)
         return;
@@ -68,7 +113,15 @@ int main() {
     append(&head, 20);
     append(&head, 30);
 
-    printf("Non-recursive yazdirma: ");
+    printf("Ilk liste: ");
+    printListIterative(head);
+
+    insertAfter(head, 20, 25);
+    printf("20'den sonra 25 eklendi: ");
+    printListIterative(head);
+
+    deleteNode(&head, 10);
+    printf("10 silindikten sonra: ");
     printListIterative(head);
 
     printf("Recursive yazdirma: ");
