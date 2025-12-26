@@ -1,55 +1,45 @@
 # Data-Structures-Homework
 
-Bu repository, Data Structures dersinde yaptığım ödevleri içermektedir.  
-Her bir ödev ayrı bir klasörde yer almakta ve kendi README dosyasıyla birlikte açıklamalar, örnekler ve C kodları bulunmaktadır.
+Bu repository, **CS1102 – Data Structures and Algorithms** dersi kapsamında
+yapılan ödevleri içermektedir.
 
+Ödevler, ders ödev numaralandırması paylaşılmadan önce uygulanmaya
+başlandığı için bazı konular daha anlaşılır olması adına **ayrı klasörler
+(partlar) halinde düzenlenmiştir**.
 
-## İçerik
+---
 
-### Part1 – Sparse Matrix
-Sparse matrix gösterimi ve dönüşümü.
+## Ders Ödevleri – Repository Eşleştirmesi
 
-### Part2 – Recursive Destroy Function
-Recursive yapı kullanılarak dinamik bellek temizleme.
+| Ders Ödevi | Repository İçeriği |
+|-----------|-------------------|
+| Sparse Matrix dönüşümü | Part1 – Sparse Matrix |
+| Hanoi Ödevi | Part3 – Towers of Hanoi |
+| Shunting Yard (Infix → Postfix) | Part5 – Shunting Yard Algorithm |
+| Max / Min Heap | Part11 – Max / Min Heap |
+| Double Linked List (ekleme, silme, traversal) | Part4 – Doubly Linked List |
+| Circular Linked List | Part12 – Circular Linked List |
+| Array’de ekleme / silme işlemleri | Part6 – Array-Based Queue Operations |
+| Graph üzerinde cluster çıkarma | Part13 – Graph Cluster Detection |
+| DFS / BFS uygulaması | Part8, Part10 – Graph Traversal |
+| Tree creation using array | Part9 – Array-Based Tree |
 
-### Part3 – Towers of Hanoi
-Rekürsif algoritma ile Towers of Hanoi çözümü.
+---
 
-### Part4 – Doubly Linked List
-- Araya ekleme (insertion)
-- Traversal (recursive & non-recursive)
-- Silme ve bellek temizleme
+## Repository Yapısı
 
-### Part5 – Shunting Yard Algorithm
-Infix ifadelerin postfix ifadeye dönüştürülmesi.
+- **Part1** – Sparse Matrix
+- **Part2** – Recursive Destroy Function
+- **Part3** – Towers of Hanoi
+- **Part4** – Doubly Linked List
+- **Part5** – Shunting Yard Algorithm
+- **Part6** – Array-Based Queue Operations
+- **Part7** – Abstract Syntax Tree (AST)
+- **Part8** – Directed Graph (Adjacency List) + DFS
+- **Part9** – Array-Based Tree
+- **Part10** – Array-Based Graph (Adjacency Matrix) + DFS & BFS
+- **Part11** – Max / Min Heap
+- **Part12** – Circular Linked List
+- **Part13** – Array-Based Graph Cluster Detection
 
-### Part6 – Array-Based Queue Operations
-Array tabanlı queue yapısı:
-- Enqueue
-- Dequeue
-- Peek
-
-### Part7 – Abstract Syntax Tree (AST)
-Matematiksel ifadelerin Abstract Syntax Tree (AST) ile gösterimi.
-
-### Part8 – Directed Graph (Adjacency List) + DFS
-Adjacency list kullanılarak yönlendirilmiş graph oluşturma ve DFS traversal.
-
-### Part9 – Array-Based Tree
-Array kullanılarak tree oluşturma ve temel işlemler.
-
-### Part10 – Array-Based Graph (Adjacency Matrix) + DFS & BFS
-Adjacency matrix kullanılarak graph gösterimi,
-DFS ve BFS traversal algoritmaları.
-
-### Part11 – Max / Min Heap
-Array tabanlı Max Heap ve Min Heap implementasyonu.
-
-### Part12 – Circular Linked List
-Çembersel linked list:
-- Ekleme
-- Silme
-- Traversal
-
-### Part13 – Array-Based Graph Cluster Detection
-Array olarak verilen graph üzerinde connected component (cluster) çıkarma.
+Her klasör, ilgili konuya ait **C kodlarını** ve kısa açıklamaları içermektedir.
