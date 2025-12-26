@@ -1,4 +1,4 @@
-# Directed Graph - Adjacency Matrix + DFS
+# Directed Graph - Adjacency Matrix + DFS & BFS
 
 Bu bölümde bir yönlendirilmiş graf (Directed Graph) **array tabanlı adjacency matrix** ile gösterilmiş ve **DFS (Depth-First Search)** traversal uygulanmıştır.
 
@@ -6,6 +6,8 @@ Bu bölümde bir yönlendirilmiş graf (Directed Graph) **array tabanlı adjacen
 - Yönlendirilmiş graf
 - Adjacency matrix kullanımı
 - DFS traversal
+- BFS traversal
+  
 
 ## Örnek
 Vertices: 0, 1, 2, 3  
